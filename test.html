@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Пройдите интерактивный тест из 10 вопросов и узнайте свой главный язык любви.">
+    <title>Тест: Узнайте свой язык любви</title>
+    
+    <!-- Подключение шрифтов Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- ========== ШАПКА САЙТА ========== -->
+    <header class="header">
+        <div class="container header__container">
+            <!-- Логотип -->
+            <a href="index.html" class="header__logo" aria-label="На главную">
+                <svg class="logo-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 38C24 38 8 28 8 18C8 13 12 10 16 10C19 10 22 12 24 15C26 12 29 10 32 10C36 10 40 13 40 18C40 28 24 38 24 38Z" stroke="#D48C86" stroke-width="2.5" fill="none"/>
+                    <path d="M24 32C24 32 14 25 14 19C14 16 16 14 19 14C21 14 23 15 24 17C25 15 27 14 29 14C32 14 34 16 34 19C34 25 24 32 24 32Z" stroke="#D48C86" stroke-width="2" fill="none" opacity="0.6"/>
+                </svg>
+            </a>
+            
+            <!-- Навигация -->
+            <nav class="header__nav" aria-label="Главная навигация">
+                <ul class="nav-list">
+                    <li class="nav-list__item">
+                        <a href="index.html" class="nav-list__link">Главная</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="test.html" class="nav-list__link nav-list__link--active">Тест</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="ideas.html" class="nav-list__link">Идеи</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Кнопка мобильного меню -->
+            <button class="header__burger" aria-label="Открыть меню" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========== ПРОГРЕСС-БАР ========== -->
+        <section class="quiz-progress" aria-label="Прогресс прохождения теста">
+            <div class="container quiz-progress__container">
+                <div class="progress-bar">
+                    <div class="progress-bar__fill" id="progressFill" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                </div>
+                <p class="progress-bar__text" id="progressText">Вопрос 0 из 10</p>
+            </div>
+        </section>
+
+        <!-- ========== ВСТУПИТЕЛЬНЫЙ БЛОК (ИНСТРУКЦИЯ) ========== -->
+        <section class="quiz-intro" id="introSection">
+            <div class="container quiz-intro__container">
+                <h1 class="section-title quiz-intro__title">Как проходить тест?</h1>
+                <div class="quiz-intro__text">
+                    <p>Отвечайте честно и быстро. Не задумывайтесь слишком долго над каждым вопросом.</p>
+                    <p>Выбирайте тот вариант, который вам ближе в реальной жизни, а не тот, который кажется «правильным» или «красивым».</p>
+                    <p>Если оба варианта кажутся вам не очень приятными, выбирайте тот, который расстроит вас <strong>меньше</strong>.</p>
+                </div>
+                <button class="btn btn--primary btn--large" id="startQuizBtn">Начать тест</button>
+            </div>
+        </section>
+
+        <!-- ========== БЛОК С ВОПРОСАМИ (Скрыт по умолчанию) ========== -->
+        <section class="quiz-area" id="quizSection" style="display: none;" aria-live="polite">
+            <div class="container quiz-area__container">
+                <div class="quiz-card">
+                    <!-- Текст вопроса -->
+                    <h2 class="quiz-card__question" id="questionText">Текст вопроса появится здесь...</h2>
+                    
+                    <!-- Варианты ответов -->
+                    <div class="quiz-card__options" id="optionsContainer">
+                        <button class="option-btn option-btn--a" id="optionA" data-language="words">
+                            <span class="option-btn__text" id="optionAText">Вариант А</span>
+                        </button>
+                        <button class="option-btn option-btn--b" id="optionB" data-language="time">
+                            <span class="option-btn__text" id="optionBText">Вариант Б</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Навигация по тесту -->
+                <div class="quiz-nav">
+                    <button class="btn btn--outline" id="prevBtn" disabled>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                        Назад
+                    </button>
+                    <button class="btn btn--primary" id="nextBtn">
+                        Далее
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== БЛОК РЕЗУЛЬТАТА (Скрыт по умолчанию) ========== -->
+        <section class="quiz-result" id="resultSection" style="display: none;" aria-live="polite">
+            <div class="container quiz-result__container">
+                <div class="result-card">
+                    <div class="result-card__icon" id="resultIcon">
+                        <!-- Иконка будет вставлена через JS в зависимости от результата -->
+                    </div>
+                    <h2 class="result-card__title">Ваш главный язык любви — <span id="resultLanguage">...</span></h2>
+                    <p class="result-card__description" id="resultDescription">Описание вашего языка любви появится здесь.</p>
+                    <a href="ideas.html" class="btn btn--primary btn--large">Узнать, как это применять</a>
+                    <button class="btn btn--text" id="restartQuizBtn">Пройти тест заново</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== ПОДВАЛ САЙТА ========== -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <p class="footer__copyright">© 2025 5 языков любви. Все права защищены.</p>
+                <p class="footer__source">Концепция основана на книге Гэри Чепмена «Пять языков любви»</p>
+            </div>
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Telegram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8A9A86" stroke-width="2">
+                        <path d="M21 5L2 12.5L9 13.5L11 21L14 16L19 19L21 5Z"/>
+                    </svg>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="VK">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8A9A86" stroke-width="2">
+                        <path d="M4 8C4 8 5 14 9 16C11 17 13 16 13 16V12C13 12 15 14 17 14C19 14 20 12 20 12C20 12 18 13 17 11C16 9 15 8 15 8H12C12 8 12 11 10 11C8 11 7 9 7 9V8H4Z"/>
+                    </svg>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8A9A86" stroke-width="2">
+                        <rect x="4" y="4" width="16" height="16" rx="4"/>
+                        <circle cx="12" cy="12" r="4"/>
+                        <circle cx="18" cy="6" r="1" fill="#8A9A86"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключение скриптов -->
+    <script src="script.js"></script>
+</body>
+</html>

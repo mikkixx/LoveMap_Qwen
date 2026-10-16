@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Узнайте свой язык любви и научитесь быть услышанными. Интерактивный гид по 5 языкам любви.">
+    <title>5 языков любви — Говорите на одном языке</title>
+    
+    <!-- Подключение шрифтов Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!-- ========== ШАПКА САЙТА ========== -->
+    <header class="header">
+        <div class="container header__container">
+            <!-- Логотип -->
+            <a href="index.html" class="header__logo" aria-label="На главную">
+                <svg class="logo-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 38C24 38 8 28 8 18C8 13 12 10 16 10C19 10 22 12 24 15C26 12 29 10 32 10C36 10 40 13 40 18C40 28 24 38 24 38Z" stroke="#D48C86" stroke-width="2.5" fill="none"/>
+                    <path d="M24 32C24 32 14 25 14 19C14 16 16 14 19 14C21 14 23 15 24 17C25 15 27 14 29 14C32 14 34 16 34 19C34 25 24 32 24 32Z" stroke="#D48C86" stroke-width="2" fill="none" opacity="0.6"/>
+                </svg>
+            </a>
+            
+            <!-- Навигация -->
+            <nav class="header__nav" aria-label="Главная навигация">
+                <ul class="nav-list">
+                    <li class="nav-list__item">
+                        <a href="index.html" class="nav-list__link nav-list__link--active">Главная</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="test.html" class="nav-list__link">Тест</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="ideas.html" class="nav-list__link">Идеи</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Кнопка мобильного меню (для адаптивности) -->
+            <button class="header__burger" aria-label="Открыть меню" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========== HERO-БЛОК (ПЕРВЫЙ ЭКРАН) ========== -->
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Говорите ли вы на одном языке с любимым человеком?</h1>
+                    <p class="hero__subtitle">Узнайте свой язык любви и научитесь быть услышанными. Пройдите короткий тест и получите персональные рекомендации.</p>
+                    <a href="test.html" class="btn btn--primary hero__cta">Пройти тест</a>
+                </div>
+                <div class="hero__image">
+                    <!-- Декоративная иллюстрация -->
+                    <svg class="hero__illustration" width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="200" cy="200" r="150" stroke="#D48C86" stroke-width="2" opacity="0.3"/>
+                        <circle cx="200" cy="200" r="100" stroke="#8A9A86" stroke-width="2" opacity="0.4"/>
+                        <path d="M200 120C200 120 140 160 140 200C140 230 165 250 200 250C235 250 260 230 260 200C260 160 200 120 200 120Z" fill="#D48C86" opacity="0.2"/>
+                        <path d="M200 150C200 150 160 180 160 205C160 225 178 240 200 240C222 240 240 225 240 205C240 180 200 150 200 150Z" fill="#D48C86" opacity="0.4"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== БЛОК "СУТЬ КОНЦЕПЦИИ" ========== -->
+        <section class="concept">
+            <div class="container concept__container">
+                <h2 class="section-title">Почему мы не понимаем друг друга?</h2>
+                <div class="concept__text">
+                    <p>Мы часто дарим любовь так, как хотим получать её сами. Но что, если ваш партнёр «слышит» любовь на совершенно другом языке?</p>
+                    <p>Психолог Гэри Чепмен выделил пять основных способов выражения любви. Когда вы знаете свой язык и язык близкого человека, отношения становятся глубже, теплее и понятнее.</p>
+                    <p>Этот сайт поможет вам разобраться в себе и найти ключ к сердцу того, кто вам дорог.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== БЛОК "5 ЯЗЫКОВ ЛЮБВИ" ========== -->
+        <section class="languages">
+            <div class="container languages__container">
+                <h2 class="section-title">Пять языков любви</h2>
+                <p class="section-subtitle">Наведите на карточку, чтобы узнать больше</p>
+                
+                <div class="languages__grid">
+                    <!-- Карточка 1: Слова поощрения -->
+                    <article class="language-card">
+                        <div class="language-card__icon">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32 52C32 52 12 40 12 26C12 19 17 15 23 15C27 15 30 17 32 21C34 17 37 15 41 15C47 15 52 19 52 26C52 40 32 52 32 52Z" fill="#D48C86" opacity="0.8"/>
+                            </svg>
+                        </div>
+                        <h3 class="language-card__title">Слова поощрения</h3>
+                        <p class="language-card__description">Комплименты, слова поддержки, признательность и ободрение. Для этих людей важно слышать, что их ценят и любят.</p>
+                    </article>
+
+                    <!-- Карточка 2: Время вместе -->
+                    <article class="language-card">
+                        <div class="language-card__icon">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="32" cy="32" r="22" stroke="#8A9A86" stroke-width="3" fill="none"/>
+                                <line x1="32" y1="32" x2="32" y2="20" stroke="#8A9A86" stroke-width="3" stroke-linecap="round"/>
+                                <line x1="32" y1="32" x2="42" y2="32" stroke="#8A9A86" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="language-card__title">Время вместе</h3>
+                        <p class="language-card__description">Полное присутствие и внимание. Совместные занятия, разговоры по душам и моменты, когда вы никуда не спешите.</p>
+                    </article>
+
+                    <!-- Карточка 3: Подарки -->
+                    <article class="language-card">
+                        <div class="language-card__icon">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="16" y="28" width="32" height="24" rx="2" fill="#8A9A86" opacity="0.7"/>
+                                <rect x="12" y="22" width="40" height="8" rx="2" fill="#8A9A86" opacity="0.7"/>
+                                <line x1="32" y1="22" x2="32" y2="52" stroke="#D48C86" stroke-width="3"/>
+                                <path d="M32 22C32 22 26 16 26 16C26 16 32 18 32 22Z" fill="#D48C86"/>
+                                <path d="M32 22C32 22 38 16 38 16C38 16 32 18 32 22Z" fill="#D48C86"/>
+                            </svg>
+                        </div>
+                        <h3 class="language-card__title">Подарки</h3>
+                        <p class="language-card__description">Визуальные символы любви. Не обязательно дорогие — важны внимание, забота и мысль, вложенная в подарок.</p>
+                    </article>
+
+                    <!-- Карточка 4: Помощь (Акты служения) -->
+                    <article class="language-card">
+                        <div class="language-card__icon">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32 14C32 14 20 22 20 32C20 38 25 42 32 42C39 42 44 38 44 32C44 22 32 14 32 14Z" fill="#D48C86" opacity="0.8"/>
+                                <path d="M32 42V50" stroke="#D48C86" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M28 46H36" stroke="#D48C86" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="language-card__title">Помощь</h3>
+                        <p class="language-card__description">Действия, которые облегчают жизнь близкого. Приготовить ужин, помочь с работой, взять на себя заботы — это язык любви.</p>
+                    </article>
+
+                    <!-- Карточка 5: Прикосновения -->
+                    <article class="language-card">
+                        <div class="language-card__icon">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 36C20 36 24 32 28 32C32 32 34 34 34 34" stroke="#8A9A86" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M44 36C44 36 40 32 36 32C32 32 30 34 30 34" stroke="#8A9A86" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M24 40C24 40 28 44 32 44C36 44 40 40 40 40" stroke="#8A9A86" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M28 28L32 24L36 28" stroke="#D48C86" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="language-card__title">Прикосновения</h3>
+                        <p class="language-card__description">Объятия, поцелуи, держание за руку, лёгкие касания. Физическая близость — главный способ чувствовать любовь.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== БЛОК ПРИЗЫВА К ДЕЙСТВИЮ ========== -->
+        <section class="cta">
+            <div class="container cta__container">
+                <h2 class="cta__title">Готовы узнать свой язык?</h2>
+                <p class="cta__text">Пройдите короткий тест из 10 вопросов и получите персональные рекомендации</p>
+                <a href="test.html" class="btn btn--primary btn--large">Начать тест</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== ПОДВАЛ САЙТА ========== -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__info">
+                <p class="footer__copyright">© 2025 5 языков любви. Все права защищены.</p>
+                <p class="footer__source">Концепция основана на книге Гэри Чепмена «Пять языков любви»</p>
+            </div>
+            <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Telegram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8A9A86" stroke-width="2">
+                        <path d="M21 5L2 12.5L9 13.5L11 21L14 16L19 19L21 5Z"/>
+                    </svg>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="VK">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8A9A86" stroke-width="2">
+                        <path d="M4 8C4 8 5 14 9 16C11 17 13 16 13 16V12C13 12 15 14 17 14C19 14 20 12 20 12C20 12 18 13 17 11C16 9 15 8 15 8H12C12 8 12 11 10 11C8 11 7 9 7 9V8H4Z"/>
+                    </svg>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8A9A86" stroke-width="2">
+                        <rect x="4" y="4" width="16" height="16" rx="4"/>
+                        <circle cx="12" cy="12" r="4"/>
+                        <circle cx="18" cy="6" r="1" fill="#8A9A86"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Подключение скриптов -->
+    <script src="script.js"></script>
+</body>
+</html>
